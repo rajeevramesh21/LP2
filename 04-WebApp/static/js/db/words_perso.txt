@@ -1,0 +1,6 @@
+WORDS,FREQ
+akshansh,1
+jaiswal,1
+leader,1
+big,1
+man,1

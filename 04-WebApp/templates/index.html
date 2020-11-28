@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>Multimodal Emotion Recognition</title>
+
+  </head>
+  <body>
+    <a href="/">
+      <img src = "/static/CSS/images/lp2 (8).png" width="100%">
+    </a>
+    <br>
+
+ {% block body %}
+
+  <!--
+  Video Analysis
+  -->
+  <div class="row">
+      <div class="column_home" id="left-col" align="center">
+        <img src = "/static/CSS/images/Facial_Emotion_Analysis.png" width="100%">
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <br>
+          <p> Capture Image</p>
+          <br>
+          <p> Facial emotions categories are :
+          <ul>
+            <li>Anger</li>
+            <li>Happiness</li>
+            <li>Fear</li>
+            <li>Sadness</li>
+            <li>Surprise</li>
+            <li>Disgust</li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <!--
+      Text Analysis
+      -->
+      <div class="column_home" id="left-col" align="center">
+       <img src = "/static/CSS/images/P_Traits.png" width="100%">
+         <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+           <br>
+           <p> Text Sentiment Analysis </p>
+           <br>
+           <p> Psychological traits categories are:
+           <ul>
+             <li>Openness</li>
+             <li>Conscientiousness</li>
+             <li>Extraversion</li>
+             <li>Agreeableness</li>
+             <li>Neuroticism</li>
+         </ul>
+         <br>
+         </div>
+     </div>
+
+  </div>
+
+
+  <div class="row">
+    <!--
+    Video button
+    -->
+     <div class="column_home" id="left-col" align="center">
+         <form action="/video" method="post" align="center">
+         <input type="submit" name="video" value="Facial Emotion Analysis" align="center">
+       </form>
+     </div>
+
+    <!--
+     Text button
+     -->
+    <div class="column_home" id="left-col" align="center">
+        <form action="/text" method="post" align="center">
+          <input type="submit" name="text" value="Text Analysis" align="center">
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+      {# Fin du bloc "body" #}
+    {% endblock %}
+
+  </body>
+</html>
